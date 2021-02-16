@@ -1,0 +1,63 @@
+body
+{
+    background-color: #1F1F1F;
+    color: #E7E7E7;
+    font-family: 'PingFang TC','微軟正黑體',Georgia, 'Times New Roman', Times, serif;
+}
+ul 
+{
+    list-style-type:disc;
+    font-family: 'PingFang TC','微軟正黑體',Georgia, 'Times New Roman', Times, serif;
+}
+.bar
+{
+    position: fixed;
+    opacity: 0.95;
+    color: #fff;
+    font-size: 2em;
+    background-color: lightpink;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 5rem;;
+    z-index: 9;
+}
+
+.bar div ul
+{
+    position: fixed;
+    top: 10px;
+    right: 0px;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+.bar div ul li
+{
+    width:150px;
+    font-size: 1.5rem;
+    text-align:center;
+    float: right;
+}
+.bar div ul li a
+{
+    text-decoration:none;
+    color:#fff;
+}
+
+.mypic
+{
+    position:relative;
+    width: 50%;
+    top: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px darkgray;
+    z-index: 1;
+}
+
+.article
+{
+    position:relative;
+    top: 70px;
+    
+}
