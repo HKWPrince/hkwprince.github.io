@@ -3,6 +3,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--This gives the browser instructions on how to control the page's dimensions and scali-->
     <title>Prince's Personal Profile</title>
     <link rel="stylesheet" href="webStyle.css">
 </head>
@@ -18,7 +20,13 @@
         </div>  
     </div>
     <br>
-    <div><img class="mypic" src="img.jpg" alt="個人照片"></div>
+    <div>
+        <picture>
+            <source class="big_screen-device" media="(min-width: 650px)" srcset="img.jpg">
+            <source class="small_screen-device" media="(min-width: 465px)" srcset="img.jpg">
+            <img class="mypic" src="img.jpg" alt="個人照片">
+          </picture>
+        </div>
     <div class="article">
         <ol type="I">
             <li>個人資訊</li>
@@ -28,8 +36,8 @@
                 </ul>
             <li>學歷</li>
                 <ul>
-                    <li>淡江大學_資訊管理學系</li>
-                    <li>明倫高中</li>
+                    <li>碩士：國立臺北科技大學_資訊與財金管理系</li>
+                    <li>大學：淡江大學_資訊管理學系</li>
                 </ul>
             <li>學業成就及活動參與</li>
                 <ol>
@@ -62,6 +70,7 @@
                         </ul>
                     <li>工作經歷</li>
                         <ul>
+                            <li>KubeTech_Academy 聯合創辦人
                             <li>猿創力程式設計學校_壞主意有限公司 講師</li>
                             <li>微星科技股份有限公司 臺北服務中心 維修助理</li>
                         </ul>

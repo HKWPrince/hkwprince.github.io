@@ -58,6 +58,25 @@ ul
     box-shadow: 5px 5px 5px darkgray;
     z-index: 1;
 }
+/*針對螢幕大小改變圖片*/
+.big_screen-device
+{
+    position:relative;
+    width: 100%;
+    top: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px darkgray;
+    z-index: 1;
+}
+.small-device
+{
+    position:relative;
+    width: 100%;
+    top: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px darkgray;
+    z-index: 1;
+}
 
 .article
 {
