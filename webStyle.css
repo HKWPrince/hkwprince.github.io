@@ -13,7 +13,7 @@ ul
 
 .bar div ul
 {
-    font-size: 2em;
+    font-size: 1em;
     position: fixed;
     opacity: 0.95;
     background-color: lightpink;
@@ -32,7 +32,7 @@ ul
     float: right;
     text-align: center;
     color:#fff;
-    font-size: 1.5rem;
+    font-size: 1 em;
     border: 1px;
     padding: 9px;
 }
