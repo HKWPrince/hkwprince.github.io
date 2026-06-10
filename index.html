@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HUANG KUO-WEI — Java Backend Engineer. Spring Boot · MS SQL · Docker · 2+ yrs in commercial bank risk systems.">
+  <title>Huang's Page</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logo_tree.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=TASA+Orbiter:wght@400;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <script>document.documentElement.classList.add('ready');</script>
+</head>
+<body>
+
+<input type="file" id="photo-file" accept="image/*">
+
+<!-- ═══════════════════ NAVBAR ═══════════════════════════ -->
+<header id="nav">
+  <nav class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="logo-star"><i class="gg-crown"></i></span>
+      <span class="logo-name">Huang Kuo-Wei</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects &amp; skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <button id="theme-btn" class="btn-icon" aria-label="Toggle dark mode">
+        <svg id="ico-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+        </svg>
+        <svg id="ico-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+      </button>
+
+      <a href="https://drive.google.com/file/d/1XJUdcjyMvr4GRsJwHq1CQ45m6v6ueZbK/view?usp=sharing" target="_blank" rel="noopener" class="btn-ghost">Resume</a>
+
+      <button id="ham" class="hamburger" aria-label="Menu">
+        <svg id="ico-ham" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+        <svg id="ico-x" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mob-menu" class="mob-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects &amp; skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ═══════════════════ HERO ═════════════════════════════ -->
+<section id="home">
+  <div class="hero-grid">
+
+    <!-- left: intro profile photo -->
+    <div class="hero-l">
+      <!-- <div class="photo-wrap">
+        <div class="photo-slot" id="photo-slot" title="Click to upload your photo">
+          <span class="photo-hint" id="photo-hint">Add Photo</span>
+          <img id="photo-img" class="photo-img" src="" alt="Huang Kuo-Wei">
+        </div>
+        <span class="photo-ring"></span>
+        <span class="photo-star">✦</span>
+      </div> -->
+
+      <div class="ty-up accent" style="margin-bottom:18px">Backend Engineer · Java · Python</div>
+      <h1 class="ty-xl heading" style="margin-bottom:20px">Hi, I'm<br>HUANG<br>KUO-WEI.</h1>
+      <p class="ty-b-md" style="max-width:520px;color:var(--text-body)">
+        Core Experience: Backend Engineer with 2+ years in commercial bank risk management systems, leveraging full-stack implementation capabilities to refactor legacy frameworks and drive 10M+ row data migrations successfully.
+        <br>Tech Stack: Proficient in Java/Spring Boot, Python,Docker, and serverless deployment (GCP Cloud Run).
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View my work</a>
+        <a href="https://drive.google.com/file/d/1XJUdcjyMvr4GRsJwHq1CQ45m6v6ueZbK/view?usp=sharing" target="_blank" rel="noopener" class="btn-outline">Download resume</a>
+      </div>
+
+      <div class="hero-ext">
+        <a href="https://github.com/HKWPrince" target="_blank" rel="noopener">github ↗</a>
+        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">linkedin ↗</a>
+      </div>
+    </div>
+
+    <!-- right: terminal / photo toggle -->
+    <div class="hero-r">
+
+      <!-- toggle pill -->
+      <div class="right-toggle">
+        <div class="rt-pill">
+          <button id="btn-terminal" class="rt-btn active" aria-label="Show terminal">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            Terminal
+          </button>
+          <button id="btn-photo" class="rt-btn" aria-label="Show photo">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            Photo
+          </button>
+        </div>
+      </div>
+
+      <!-- panel wrapper — both faces live in the same grid cell -->
+      <div class="right-panel">
+
+        <!-- Face A: Terminal (default) -->
+        <div class="rp-face active" id="rp-terminal">
+          <div class="terminal">
+            <div class="term-bar">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+              <span class="term-file">~/portfolio — zsh</span>
+            </div>
+            <div class="term-body">
+              <div><span class="tp">$</span> whoami</div>
+              <div class="tg">Backend-engineer · Full-stack Implementation</div>
+              <div><span class="tp">$</span> stack --primary</div>
+              <div class="ts">[ Java · Spring Boot · MS SQL · Python · Docker ]</div>
+              <div><span class="tp">$</span> highlights</div>
+              <div class="tg">→ 10M+ rows migrated, zero data loss</div>
+              <div class="tg">→ legacy .NET batch refactored to async</div>
+              <div class="tg">→ TOEIC 855 · GCP Cloud Run · CI/CD</div>
+              <div><span class="tp">$</span> <span class="cursor"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Face B: Photo -->
+        <div class="rp-face" id="rp-photo-panel">
+          <div class="photo-panel">
+            <div class="photo-panel-hdr">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+              <span class="term-file">~/portfolio — photo.jpg</span>
+            </div>
+            <div class="photo-panel-body">
+              <div class="photo-slot-lg" id="photo-slot-lg" title="Click to upload your photo">
+                <span class="photo-hint-lg" id="photo-hint-lg">Click to upload your photo</span>
+                <img src="assets/img/profile.jpg" id="photo-img-r" class="photo-img-r" alt="Huang Kuo-Wei" >
+              </div>
+              <!-- <div class="photo-panel-meta">
+                <span class="ty-up" style="color:#d77a9b;font-size:11px">HUANG KUO-WEI</span>
+                <span style="font-family:var(--font-mono);font-size:11px;color:#6c6a64">backend engineer · taipei, tw</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /right-panel -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ ABOUT ════════════════════════════ -->
+<section id="about">
+  <div class="wrap">
+
+    <div class="sf">
+      <div class="ty-up accent">About</div>
+      <h2 class="ty-lg heading" style="margin-top:14px">Where I've worked.</h2>
+    </div>
+
+    <!-- Timeline -->
+    <div class="tl">
+
+      <!-- Taishin International Bank -->
+      <div class="tl-row sf">
+        <div class="tl-date">04.2024 — 05.2026</div>
+        <div class="tl-line"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <h3 class="ty-t-lg heading">Taishin International Bank (TSIB)</h3>
+          <div class="tl-role">Senior-programmer / RDSS</div>
+          <ul class="tl-ul">
+            <li><span class="dash">—</span><span>
+              <strong>[Batch Refactoring &amp; UX Optimization]</strong>
+              Addressed a critical limitation in a 2–3 hr monthly risk-management batch blocked by the .NET page lifecycle.
+              Decoupled the process into async DB writes + AJAX polling, delivering a real-time progress bar and interrupt alert system.
+            </span></li>
+            <li><span class="dash">—</span><span>
+              <strong>[System Integration &amp; Data Migration]</strong>
+              Supported the Taishin–ShinKong merger: coordinated and verified schemas for 10M+ rows of incoming data from ShinKong Financial,
+              integrated the data sources, and modified existing batch execution applications accordingly.
+            </span></li>
+            <li><span class="dash">—</span><span>
+              <strong>[Technical Leadership &amp; Mentorship]</strong>
+              Mentored onboarding engineers through dev-environment setup and system walkthroughs;
+              coordinated task distribution to align with project timelines.
+            </span></li>
+            <li><span class="dash">—</span><span>
+              <strong>[Automated Data Validation]</strong>
+              Built a Python (Pandas) pre-import validation utility that identifies layout anomalies in source files,
+              eliminating migration interruptions caused by malformed data.
+            </span></li>
+            <li><span class="dash">—</span><span>
+              <strong>[Efficiency Gains]</strong>
+              Guided team members on integrating AI assistant tools into daily workflows,
+              increasing team-wide code writing and debugging throughput.
+            </span></li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">.NET Framework</span>
+            <span class="tag">C#</span>
+            <span class="tag">VB</span>
+            <span class="tag">MS SQL Server</span>
+            <span class="tag">Python (Pandas)</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">AJAX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KubeTech Academy -->
+      <div class="tl-row sf">
+        <div class="tl-date">06.2021 — 06.2025</div>
+        <div class="tl-line"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <h3 class="ty-t-lg heading">KubeTech Academy</h3>
+          <div class="tl-role">Co-founder / Instructor</div>
+          <ul class="tl-ul">
+            <li><span class="dash">—</span><span>
+              <strong>[Full-Stack Architecture Design]</strong>
+              Designed a decoupled frontend-backend framework to guide students through building custom full-stack web portfolios.
+            </span></li>
+            <li><span class="dash">—</span><span>
+              <strong>[Cloud Deployment Solutions]</strong>
+              Bypassed GitHub Pages static-hosting limits by engineering a Python + GCP Cloud Run (Serverless) workflow,
+              enabling dynamic backend APIs at near-zero cost.
+            </span></li>
+            <li><span class="dash">—</span><span>
+              <strong>[Team Management]</strong>
+              Co-Founded a boutique IT education brand; managed long- and short-term strategy,
+              established operational procedures, and coordinated instructors, TAs, and admin staff.
+            </span></li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Python (Flask, Pandas)</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">GCP Cloud Run</span>
+            <span class="tag">Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DBS Bank -->
+      <div class="tl-row sf">
+        <div class="tl-date">12.2021 — 02.2022</div>
+        <div class="tl-line"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <h3 class="ty-t-lg heading">DBS Bank</h3>
+          <div class="tl-role">Backend Developer Intern</div>
+          <ul class="tl-ul">
+            <li><span class="dash">—</span><span>
+              <strong>[Cache Optimization &amp; Performance]</strong>
+              Streamed high-frequency WebSocket state updates into Redis via Node.js,
+              reducing relational DB I/O load and accelerating system response times.
+            </span></li>
+            <li><span class="dash">—</span><span>
+              <strong>[DevOps Pipelines]</strong>
+              Set up and maintained CI/CD pipelines with GitHub Actions;
+              enforced environment parity between staging and production via Docker containerization.
+            </span></li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Node.js</span>
+            <span class="tag">Redis</span>
+            <span class="tag">WebSocket</span>
+            <span class="tag">Python</span>
+            <span class="tag">Docker</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- InsightXplorer -->
+      <div class="tl-row sf">
+        <div class="tl-date">06.2022 — 08.2023</div>
+        <div class="tl-line"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <h3 class="ty-t-lg heading">InsightXplorer</h3>
+          <div class="tl-role">backend intern</div>
+          <ul class="tl-ul">
+            <li><span class="dash">—</span><span>
+              Maintained MySQL databases on Linux servers;
+              collaborated in architecture meetings to align web structures with business needs.
+            </span></li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+
+    <!-- Education -->
+    <div class="sf">
+      <h3 class="ty-sm heading" style="margin-top:40px">Education</h3>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <span class="edu-dates">09.2021 — 02.2024</span>
+          <span class="ty-t-sm heading">National Taipei University of Technology</span>
+          <span class="ty-b-sm muted">Master of Information and Finance Management</span>
+        </div>
+        <div class="edu-card">
+          <span class="edu-dates">09.2023 — 02.2024</span>
+          <span class="ty-t-sm heading">Karlsruhe University of Applied Sciences</span>
+          <span class="ty-b-sm muted">
+            Exchange Program · Germany — Adapted swiftly to a multicultural environment,
+            collaborating with international peers and sharpening cross-cultural communication
+            and critical thinking.
+          </span>
+        </div>
+        <div class="edu-card">
+          <span class="edu-dates">09.2017 — 06.2021</span>
+          <span class="ty-t-sm heading">Tamkang University</span>
+          <span class="ty-b-sm muted">Bachelor of Information Management</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ PROJECTS & SKILLS ════════════════════ -->
+<section id="projects">
+  <div class="wrap">
+
+    <div class="sf">
+      <div class="ty-up accent">Work</div>
+      <h2 class="ty-lg heading" style="margin-top:14px">Selected projects.</h2>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- Face8uy — YouTube video embedded -->
+      <div class="proj-card-plain sf">
+        <span class="ty-up proj-cat">NSTC Research Grant</span>
+        <span class="proj-title">Face8uy</span>
+        <span class="ty-b-sm proj-desc">
+          Led a student research team to secure the National Science and Technology Council(NSTC)
+          undergraduate research grant. Partnered with vendor Face8 to integrate enterprise-grade
+          facial recognition into a retail digitalization solution. Coordinated the full-stack
+          architecture using Node.js Express, Firebase, Xcode, and Swift.
+        </span>
+        <div class="proj-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Swift</span>
+          <span class="tag">Xcode</span>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/6NWdsfnuOi0?si=8mdnpafrAtoKfvQn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Bond Reporter -->
+      <a href="https://github.com/HKWPrince/bondsReporter" class="proj-card sf">
+        <span class="ty-up proj-cat">Freelance</span>
+        <span class="proj-title">Bond Reporter</span>
+        <span class="ty-b-sm proj-desc">
+          Full-stack web app with an automated data pipeline fetching daily market data
+          from the Taipei Exchange, importing it into a database, and generating custom reports.
+          Fully containerized via Docker for cross-platform handoff.
+        </span>
+        <div class="proj-tags">
+          <span class="tag">Flask</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Docker</span>
+        </div>
+        <span class="proj-cta">case study ↗</span>
+      </a>
+
+      <!-- Master's Thesis -->
+      <a href="#projects" class="proj-card sf">
+        <span class="ty-up proj-cat">Master's Thesis</span>
+        <span class="proj-title">Hyperledger Mobile Payment</span>
+        <span class="ty-b-sm proj-desc">
+          Prototype of a mobile payment and advertising platform based on Hyperledger Fabric.
+          Independently coded JavaScript smart contracts (Chaincode) for peer-to-peer transactions.
+          Built with a Node.js Express backend and an iOS wallet application via Xcode and Swift.
+        </span>
+        <div class="proj-tags">
+          <span class="tag">Hyperledger Fabric</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Smart Contracts</span>
+          <span class="tag">Swift</span>
+        </div>
+        <div class="video-wrap">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_cMZZdSybXU?si=fFnIxhGORMmVyiWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Toolbox -->
+    <div class="sf">
+      <h3 class="ty-sm heading" style="margin-top:88px">Toolbox</h3>
+      <div class="toolbox">
+
+        <div class="skill-row">
+          <span class="ty-up skill-label faint">Prog. Languages</span>
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">T-SQL</span>
+            <span class="chip">Shell Script</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="ty-up skill-label faint">Frameworks</span>
+          <div class="chips">
+            <span class="chip">Spring Boot</span>
+            <!-- <span class="chip">Spring Data JPA</span>
+            <span class="chip">Hibernate</span> -->
+            <span class="chip">Node.js</span>
+            <span class="chip">Flask</span>
+            <span class="chip">Express</span>
+            <span class="chip">Bootstrap</span>
+            <span class="chip">Hyperledger Fabric</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="ty-up skill-label faint">Databases &amp; Cache</span>
+          <div class="chips">
+            <span class="chip">MS SQL Server</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Redis</span>
+            <span class="chip">Firebase</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="ty-up skill-label faint">DevOps &amp; Tools</span>
+          <div class="chips">
+            <span class="chip">Docker</span>
+            <span class="chip">GCP Cloud Run</span>
+            <span class="chip">GitHub Actions</span>
+            <span class="chip">Git</span>
+            <span class="chip">Linux</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="ty-up skill-label faint">Spoken Languages</span>
+          <div class="chips">
+            <span class="chip">English (TOEIC 855)</span>
+            <span class="chip">Mandarin (Native)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ══════════════════════════ -->
+<section id="contact">
+  <div class="contact-grid">
+
+    <div class="sf">
+      <div class="ty-up accent">Contact</div>
+      <h2 class="ty-lg heading" style="margin-top:14px">Let's connect.</h2>
+      <p class="ty-b-md" style="margin-top:22px;max-width:420px;color:var(--text-body)">
+        Currently open to new opportunities. Whether you have a question or just want to say hi,
+        I'll do my best to get back to you.
+      </p>
+
+      <div class="ci-rows">
+        <div class="ci-row">
+          <span class="ty-up faint">Email</span>
+          <a href="mailto:prince880211@gmail.com">prince880211@gmail.com</a>
+        </div>
+        <div class="ci-row">
+          <span class="ty-up faint">Phone</span>
+          <span>+886-912-110-491</span>
+        </div>
+        <div class="ci-row">
+          <span class="ty-up faint">Location</span>
+          <span>Taipei, Taiwan</span>
+        </div>
+      </div>
+
+      <div class="ci-ext">
+        <a href="https://github.com/HKWPrince" target="_blank" rel="noopener">github ↗</a>
+        <!-- TODO: replace with your LinkedIn URL -->
+        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">linkedin ↗</a>
+      </div>
+    </div>
+
+    <!-- TODO: replace yourFormId with your real Formspree form ID -->
+    <form class="cform sf" action="https://formspree.io/f/yourFormId" method="POST">
+      <div class="form-row">
+        <div class="fg">
+          <label for="f-name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+        </div>
+        <div class="fg">
+          <label for="f-email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@company.com" required>
+        </div>
+      </div>
+      <div class="fg">
+        <label for="f-subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Backend role at your company">
+      </div>
+      <div class="fg">
+        <label for="f-message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about the role or project…" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send message</button>
+      <p class="form-hint">
+
+      </p>
+    </form>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div class="ft-logo">
+        <span style="color:var(--accent);font-size:18px;line-height:1">✦</span>
+        <span>Huang Kuo-Wei</span>
+      </div>
+      <div class="ft-links">
+        <a href="https://github.com/HKWPrince" target="_blank" rel="noopener">github ↗</a>
+        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">linkedin ↗</a>
+        <a href="mailto:prince880211@gmail.com">email ↗</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 Huang Kuo-Wei. All rights reserved.</span>
+      <span class="mono">built for GitHub Pages · no backend required</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="btt" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<!-- Scripts -->
+<script src="script.js" defer></script>
+
+</body>
+</html>
