@@ -1,10 +1,3 @@
-# functions-framework==3.*
-# firebase-admin==6.0.1
-# google-cloud-firestore==2.13.0
-# Flask==2.3.2
-
-
-
 import functions_framework
 import smtplib
 from flask import redirect, request
@@ -17,55 +10,36 @@ from email.mime.multipart import MIMEMultipart
 def hello_http(request):
     if request.method == 'POST':
 
-        photo={"https://hkwprince.github.io": "https://hkwprince.github.io/assets/img/profile-img.jpeg",
-        "https://lennert1226.github.io": "https://lennert1226.github.io/assets/img/me.jpg",
-        "https://yoshilinmc.github.io": "https://yoshilinmc.github.io/assets/img/passport2.jpg",
-        "https://scofield0605.github.io": "https://scofield0605.github.io/assets/img/Scofield_tsai_Toronto%20.jpg",
-        "https://lucas0932.github.io": "https://lucas0932.github.io/assets/img/me.jpg"}
-
-
-        photoUrl = "https://github.com/HKWPrince/hkwprince.github.io/blob/master/assets/img/logo_tree.png?raw=true"
+        address="https://hkwprince.github.io"
+        photoUrl = "https://avatars.githubusercontent.com/u/70823007?v=4"
         name = ""
         email = ""
-        phone = ""
-        message = ""
-        address = ""
-        mailTo = ""
+        subject = ""
+
 
         name = request.values.get('name')
         email = request.values.get('email')
-        phone = request.values.get('phone')
+        subject = request.values.get('subject')
         message = request.values.get('message')
-        address = request.values.get('address')
-        mailTo = request.values.get('mailTo')
-        sender=address.replace("https://","").replace(".github.io","")
+        sender="HUANG KUO-WEI"
         
-        print("表單接收到的資料：")
-        print("name:", name)
-        print("email:", email)
-        print("phone:", phone)
-        print("message:", message)
-        print("address:", address)
-        print("mailTo:", mailTo)
+        
 
-        if photo.get(address):
-            photoUrl = photo[address]
-
-        text = "姓名:{}\n信箱:{}\n電話:{}\n\n內容:\n{}".format(name, email, phone, message)
+        text = "姓名:{}\n信箱:{}\n主旨:{}\n\n內容:\n{}".format(name, email, subject, message)
         text = MIMEText(text)
         
         content = MIMEMultipart()
-        content['subject'] = "有人要留言給你囉"
-        content['from'] = "kubetech.academy0524@gmail.com"
-        content['to'] = mailTo
+        content['subject'] = "有人留言給你囉"
+        content['from'] = "prince880211@gmail.com"
+        content['to'] = "prince880211@gmail.com"
         content.attach(text)
 
-        text2 = "Dear {},\nThank you for reaching out to us through our message board.\n I have received your message and will get back to you as soon as possible.\nIf you have any further questions, please feel free to contact us again.\n\n Best regards,\n from {}\n\n\n\nThis is an automated E-mail from system.".format(name, mailTo)
+        text2 = "Dear {},\nThank you for reaching out to us through our message board.\n I have received your message and will get back to you as soon as possible.\nIf you have any further questions, please feel free to contact us again.\n\n Best regards,\n from {}\n\n\n\nThis is an automated E-mail from system.".format(name, sender)
         text2 = MIMEText(text2)
         
         contentToGuest = MIMEMultipart()
         contentToGuest['subject'] = "Thank you for your message — we’ve received it!"
-        contentToGuest['from'] = "kubetech.academy0524@gmail.com"
+        contentToGuest['from'] = "prince880211@gmail.com"
         contentToGuest['to'] = email
 
         guest_html = """
@@ -166,26 +140,24 @@ def hello_http(request):
             <div class="container">
                 <img class="avatar" src="{photoUrl}" alt="avatar">
 
-                <h2>親愛的 {name}，您好：</h2>
-                <p> ✨ 感謝您透過我的個人網站留言！<br>
-                我已收到以下訊息，將會盡快回覆您，請稍候片刻 😊</p>
+                <h2>Dear {name},：</h2>
+                <p> ✨ nThank you for reaching out to us through our message board！<br>
+                I have received your message and will get back to you as soon as possible. 😊</p>
                 <table>
                 <tr>
-                    <td>👤 <strong>姓名：</strong><br>{name}</td>
+                    <td>👤 <strong>Name：</strong><br>{name}</td>
                 </tr>
                 <tr>
-                    <td>📧 <strong>信箱：</strong><br>{email}</td>
+                    <td>📧 <strong>Email：</strong><br>{email}</td>
                 </tr>
+
                 <tr>
-                    <td>📞 <strong>電話：</strong><br>{phone}</td>
-                </tr>
-                <tr>
-                    <td>📝 <strong>留言內容：</strong><br>
+                    <td>📝 <strong>Content</strong><br>
                     {message.replace('\n', '<br>')}</td>
                 </tr>
                 </table>
 
-                <p> 如果您還有其他問題，歡迎隨時再次聯絡我🙌</p>
+                <p> If you have any further questions, please feel free to contact us again.<br>\n\n</p>
                 <div style="text-align: center; margin: 24px 0;">
                 <a href="{address}" style="display: inline-block; background: #d39fa5; color: white; padding: 12px 28px; border-radius: 10px; text-decoration: none; font-weight: 600;">
                     ✨ 前往留言表單
@@ -193,11 +165,11 @@ def hello_http(request):
                 </div>
 
                 <div class="footer">
-                📮 此為系統自動寄送的通知信，請勿直接回覆。<br>
-                💖 感謝您對 <a href="mailto:{mailTo}" style="color: #b76e79; text-decoration: none;">{mailTo}</a> 的支持與關注！
+                📮 This is an automated E-mail from system.<br>
+                💖 Thank you for your support to<a href="mailto:prince880211@gmail.com" style="color: #b76e79; text-decoration: none;">{sender}</a> ！
                 </div>
                 <p style="font-size: 16px; color: #b76e79; margin-top: 40px; text-align: right;">
-                <strong style="font-size: 17px;">{sender} 敬上</strong>
+                <strong style="font-size: 17px;">{sender} Best regard</strong>
                 </p>
             </div>
             </body>
@@ -213,7 +185,7 @@ def hello_http(request):
         try:
             smtp.ehlo()
             smtp.starttls()
-            smtp.login("kubetech.academy0524@gmail.com", mailToken)
+            smtp.login("prince880211@gmail.com", mailToken)
             smtp.send_message(content)
             smtp.send_message(contentToGuest)
             print("Email is sent successfully!")
