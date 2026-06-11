@@ -161,3 +161,24 @@ document.querySelector('.cform').addEventListener('submit', function (e) {
       + '&body='    + encodeURIComponent('From: ' + name + '\n\n' + message);
   }
 });
+
+// Email validation with regex, allowing empty input (optional field).
+function validateEmail() {
+  const emailField = document.getElementById("email");
+  const errorText = document.getElementById("errorMessage");
+  
+  // Clean trailing spaces and lowercase the input
+  const emailValue = emailField.value.trim().toLowerCase(); 
+  
+  // Standard, practical regex format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+  if (emailRegex.test(emailValue) || emailValue === "") {
+    errorText.style.display = "none";
+    emailField.style.borderColor = "green";
+  } else {
+    errorText.style.display = "block";
+    emailField.style.borderColor = "red";
+  }
+}
+

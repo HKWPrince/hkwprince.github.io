@@ -97,8 +97,8 @@
       </div>
 
       <div class="hero-ext">
-        <a href="https://github.com/HKWPrince" target="_blank" rel="noopener">github ↗</a>
-        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">linkedin ↗</a>
+        <a href="https://github.com/HKWPrince" target="_blank" rel="noopener">Github ↗</a>
+        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">Linkedin ↗</a>
       </div>
     </div>
 
@@ -356,29 +356,7 @@
     </div>
 
     <div class="proj-grid">
-
-      <!-- Face8uy — YouTube video embedded -->
-      <div class="proj-card-plain sf">
-        <span class="ty-up proj-cat">NSTC Research Grant</span>
-        <span class="proj-title">Face8uy</span>
-        <span class="ty-b-sm proj-desc">
-          Led a student research team to secure the National Science and Technology Council(NSTC)
-          undergraduate research grant. Partnered with vendor Face8 to integrate enterprise-grade
-          facial recognition into a retail digitalization solution. Coordinated the full-stack
-          architecture using Node.js Express, Firebase, Xcode, and Swift.
-        </span>
-        <div class="proj-tags">
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
-          <span class="tag">Firebase</span>
-          <span class="tag">Swift</span>
-          <span class="tag">Xcode</span>
-        </div>
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/6NWdsfnuOi0?si=8mdnpafrAtoKfvQn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-
+      
       <!-- Bond Reporter -->
       <a href="https://github.com/HKWPrince/bondsReporter" class="proj-card sf">
         <span class="ty-up proj-cat">Freelance</span>
@@ -417,11 +395,33 @@
         </div>
       </a>
 
+            <!-- Face8uy — YouTube video embedded -->
+      <div class="proj-card-plain sf">
+        <span class="ty-up proj-cat">NSTC Research Grant</span>
+        <span class="proj-title">Face8uy</span>
+        <span class="ty-b-sm proj-desc">
+          Led a student research team to secure the National Science and Technology Council(NSTC)
+          undergraduate research grant. Partnered with vendor Face8 to integrate enterprise-grade
+          facial recognition into a retail digitalization solution. Coordinated the full-stack
+          architecture using Node.js Express, Firebase, Xcode, and Swift.
+        </span>
+        <div class="proj-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Swift</span>
+          <span class="tag">Xcode</span>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/6NWdsfnuOi0?si=8mdnpafrAtoKfvQn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
     </div>
 
     <!-- Toolbox -->
     <div class="sf">
-      <h3 class="ty-sm heading" style="margin-top:88px">Toolbox</h3>
+      <h3 class="ty-sm heading" style="margin-top:88px">Skills</h3>
       <div class="toolbox">
 
         <div class="skill-row">
@@ -471,7 +471,7 @@
         </div>
 
         <div class="skill-row">
-          <span class="ty-up skill-label faint">Spoken Languages</span>
+          <span class="ty-up skill-label faint">Languages</span>
           <div class="chips">
             <span class="chip">English (TOEIC 855)</span>
             <span class="chip">Mandarin (Native)</span>
@@ -514,7 +514,7 @@
       <div class="ci-ext">
         <a href="https://github.com/HKWPrince" target="_blank" rel="noopener">github ↗</a>
         <!-- TODO: replace with your LinkedIn URL -->
-        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">linkedin ↗</a>
+        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">Linkedin ↗</a>
       </div>
     </div>
 
@@ -522,26 +522,25 @@
     <form class="cform sf" action="https://message-board-852681716185.us-central1.run.app" method="POST">
       <div class="form-row">
         <div class="fg">
-          <label for="f-name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="HUANG" required>
         </div>
         <div class="fg">
-          <label for="f-email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your@company.com" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="yourName@company.com" required oninput="validateEmail()">
         </div>
       </div>
+      <p class="form-hint" id="errorMessage" style="display: none; color:var(--accent-press);margin-top:12px;font-size:13px">
+        Oops! Please enter a valid email address.</p>
       <div class="fg">
-        <label for="f-subject">Subject</label>
+        <label for="subject">Subject</label>
         <input type="text" id="subject" name="subject" placeholder="Backend role at your company">
       </div>
       <div class="fg">
-        <label for="f-message">Message</label>
+        <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" placeholder="Tell me about the role or project…" required></textarea>
       </div>
       <button type="submit" class="btn-submit">Send message</button>
-      <p class="form-hint">
-
-      </p>
     </form>
 
   </div>
@@ -552,18 +551,17 @@
   <div class="ft-inner">
     <div class="ft-top">
       <div class="ft-logo">
-        <span style="color:var(--accent);font-size:18px;line-height:1">✦</span>
+        <span class="logo-star"><i class="gg-crown"></i></span>
         <span>Huang Kuo-Wei</span>
       </div>
       <div class="ft-links">
-        <a href="https://github.com/HKWPrince" target="_blank" rel="noopener">github ↗</a>
-        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">linkedin ↗</a>
-        <a href="mailto:prince880211@gmail.com">email ↗</a>
+        <a href="https://github.com/HKWPrince" target="_blank" rel="noopener">Github ↗</a>
+        <a href="https://www.linkedin.com/in/kuo-wei-huang-827407203" target="_blank" rel="noopener">Linkedin ↗</a>
+        <a href="mailto:prince880211@gmail.com">E-mail ↗</a>
       </div>
     </div>
     <div class="ft-bottom">
       <span>© 2026 Huang Kuo-Wei. All rights reserved.</span>
-      <span class="mono">built for GitHub Pages · no backend required</span>
     </div>
   </div>
 </footer>

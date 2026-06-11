@@ -9,7 +9,7 @@ img  { display: block; max-width: 100%; }
 
 /* ── TOKENS ─────────────────────────────────────────────── */
 :root {
-  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-display: 'TASA Orbiter','Newsreader', Georgia, 'Times New Roman', serif;
   --font-sans:    'TASA Orbiter','Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono:    'TASA Orbiter','JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
 
